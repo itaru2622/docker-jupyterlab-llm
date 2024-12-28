@@ -18,7 +18,8 @@ RUN if [[ ${base} != python* ]] ; \
 
 # add packages for jupyterlabs...
 RUN apt  install -y  bash-completion nodejs; \
-    pip3 install     jupyterlab ipywidgets plotly  jupyterlab_widgets jupyter-dash   jupyterlab-git
+    pip3 install     jupyterlab ipywidgets plotly  jupyterlab_widgets jupyter-dash   jupyterlab-git \
+                     pandas openpyxl pydantic
 
 ARG workdir=/work
 ARG token=''
