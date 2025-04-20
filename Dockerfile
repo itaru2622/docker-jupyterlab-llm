@@ -20,7 +20,7 @@ RUN if [[ ${base} != python* ]] ; \
 RUN apt  install -y  bash-completion nodejs; \
     pip3 install     jupyterlab ipywidgets plotly dash jupyterlab_widgets jupyterlab-git \
                      pandas openpyxl pydantic python-dotenv \
-                     openai langchain langchain_openai
+                     openai langchain langgraph langchain-mcp-adapters    langchain_openai ollama langchain-ollama
 
 ARG workdir=/work
 ARG token=''
