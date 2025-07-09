@@ -18,9 +18,9 @@ RUN if [[ ${base} != python* ]] ; \
 
 # add packages for jupyterlabs...
 RUN apt  install -y  bash-completion nodejs; \
-    pip3 install     jupyterlab ipywidgets plotly dash jupyterlab_widgets jupyterlab-git \
+    pip3 install     jupyterlab ipywidgets plotly dash jupyterlab_widgets jupyterlab-git jupyter-ai[all] \
                      pandas openpyxl pydantic python-dotenv \
-                     openai langchain langgraph langchain-mcp-adapters    langchain_openai ollama langchain-ollama
+                     openai langchain langgraph langchain-mcp-adapters    langchain_openai
 
 ARG workdir=/work
 ARG token=''
